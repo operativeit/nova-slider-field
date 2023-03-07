@@ -3,9 +3,12 @@
 namespace Human018\NovaSlideField;
 
 use Laravel\Nova\Fields\Field;
+use Laravel\Nova\Fields\SupportsDependentFields;
 
 class NovaSlideField extends Field
 {
+    use SupportsDependentFields;
+
     /**
      * The field's component.
      *
