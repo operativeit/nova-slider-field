@@ -3,7 +3,8 @@
     "description": "A Laravel Nova field.",
     "keywords": [
         "laravel",
-        "nova"
+        "nova",
+        "slider"
     ],
     "license": "MIT",
     "require": {
