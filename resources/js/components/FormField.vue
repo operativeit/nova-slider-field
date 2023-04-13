@@ -1,6 +1,6 @@
 <template>
   <DefaultField
-    :field="field"
+    :field="currentField"
     :errors="errors"
     :show-help-text="showHelpText"
     :full-width-content="fullWidthContent"
@@ -9,25 +9,24 @@
       <vue-slider ref="slider" v-model="value"
                   class="w-full mt-2"
                   :class="errorClasses"
-                  :id="field.attribute"
-                  :min="field.min || 0"
-                  :max="field.max || 100"
-                  :interval="field.step || 1"
-                  :tooltip="field.tooltip || 'always'"
-                  :formatter="field.formatter || null">
-
+                  :id="currentField.attribute"
+                  :min="currentField.min || 0"
+                  :max="currentField.max || 100"
+                  :interval="currentField.step || 1"
+                  :tooltip="currentField.tooltip || 'always'"
+                  :formatter="currentField.formatter || null">
       </vue-slider>
     </template>
   </DefaultField>
 </template>
 
 <script>
-import { FormField, HandlesValidationErrors } from 'laravel-nova'
+import { HandlesValidationErrors, DependentFormField } from 'laravel-nova'
 import vueSlider from 'vue-slider-component'
 import 'vue-slider-component/theme/antd.css'
 
 export default {
-  mixins: [FormField, HandlesValidationErrors],
+  mixins: [HandlesValidationErrors, DependentFormField],
 
   props: ['resourceName', 'resourceId', 'field'],
 
