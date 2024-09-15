@@ -1,6 +1,6 @@
 {
-    "name": "human018/nova-slide-field",
-    "description": "A Laravel Nova field.",
+    "name": "eom-plus/nova-slider-field",
+    "description": "A Laravel Nova slider field.",
     "keywords": [
         "laravel",
         "nova",
