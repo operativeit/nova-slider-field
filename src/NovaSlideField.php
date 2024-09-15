@@ -1,11 +1,11 @@
 <?php
 
-namespace Human018\NovaSlideField;
+namespace EomPlus\NovaSliderField;
 
 use Laravel\Nova\Fields\Field;
 use Laravel\Nova\Fields\SupportsDependentFields;
 
-class NovaSlideField extends Field
+class NovaSliderField extends Field
 {
     use SupportsDependentFields;
 
@@ -14,7 +14,7 @@ class NovaSlideField extends Field
      *
      * @var string
      */
-    public $component = 'nova-slide-field';
+    public $component = 'nova-slider-field';
 
     /**
      * Set the minimum value, defaults to 0
